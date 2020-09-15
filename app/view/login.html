@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Radio Campus - Login</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <img class="wave" src="assets/img/wave.png">
+  <div class="container">
+    <div class="img">
+      <img src="assets/img/bg.svg">
+    </div>
+    <div class="login-content">
+      <form action="login/check" method="POST" autocomplete="off">
+        <img src="assets/img/logo.png" height="30%;"><br>
+              {% if error != '' %}
+              <p style="color: #FF6347;"><i class="fa fa-code"></i>&nbsp;Acesso não autorizado!</p><br>
+              {% endif %}
+              <div class="input-div one">
+                 <div class="i">
+                    <i class="fas fa-user"></i>
+                 </div>
+                 <div class="div">
+                    <h5>Email</h5>
+                    <input type="email" class="input" name="email" autocomplete="off" required autocomplete="off">
+                 </div>
+              </div>
+              <div class="input-div pass">
+                 <div class="i"> 
+                    <i class="fas fa-lock"></i>
+                 </div>
+                 <div class="div">
+                    <h5>Senha</h5>
+                    <input type="password" class="input" name="password" required autocomplete="off">
+                 </div>
+              </div>
+              <input type="submit" class="btn" value="Login">
+              <a  href="login/cadastro" style="text-align: center;">Não possui login? Clique aqui.</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="assets/js/pace.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
