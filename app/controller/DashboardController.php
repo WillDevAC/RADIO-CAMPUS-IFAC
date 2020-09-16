@@ -62,10 +62,10 @@
 			try {
 				Adm::confirmaRequest($nome, $email, $s, $id_user);
 				$_SESSION['sucesso'] = array('mensagem' => 'SUCESSO: Cadastro confirmado com sucesso!', 'contador' => 0);
-				header('Location: http://localhost/radiocampus/dashboard');
+				header('Location: http://radiocampusadmin.com.br/dashboard');
 			} catch (Exception $e) {
 				$_SESSION['errorSession'] = array('mensagem' => $e->getMessage(), 'contador2' => 0);
-				header('Location: http://localhost/radiocampus/dashboard');
+				header('Location: http://radiocampusadmin.com.br/dashboard');
 			}
 		} 
 
@@ -75,10 +75,10 @@
 			 $email = $_GET['email'];
 			 Adm::unrequest($_GET, $email);
 			 $_SESSION['sucesso'] = array('mensagem' => 'SUCESSO: Registro de cadastro negado com sucesso!', 'contador' => 0);
-			 header('Location: http://localhost/radiocampus/dashboard');
+			 header('Location: http://radiocampusadmin.com.br/dashboard');
 			} catch (Exception $e) {
 			 $_SESSION['errorSession'] = array('mensagem' => $e->getMessage(), 'contador2' => 0);
-			 header('Location: http://localhost/radiocampus/dashboard');
+			 header('Location: http://radiocampusadmin.com.br/dashboard');
 			}
 		}
 		//função de incluir locutor
@@ -97,10 +97,10 @@
 			try {
 			 Adm::excluirLocutor($_GET);
 			 $_SESSION['sucesso'] = array('mensagem' => 'SUCESSO: Locutor excluido com sucesso!', 'contador' => 0);
-			 header('Location: http://localhost/radiocampus/dashboard');
+			 header('Location: http://radiocampusadmin.com.br/dashboard');
 			} catch (Exception $e) {
 			 $_SESSION['errorSession'] = array('mensagem' => $e->getMessage(), 'contador2' => 0);
-			 header('Location: http://localhost/radiocampus/dashboard');
+			 header('Location: http://radiocampusadmin.com.br/dashboard');
 			}
 		}
 		//função de confirmar musica
@@ -108,10 +108,10 @@
 			try {
 				Musics::confirmarMusica($_GET);	
 				$_SESSION['sucesso'] = array('mensagem' => 'SUCESSO: Música confirmada com sucesso!', 'contador' => 0);
-				header('Location: http://localhost/radiocampus/dashboard');	
+				header('Location: http://radiocampusadmin.com.br/dashboard');	
 			} catch (Exception $e) {
 				$_SESSION['errorSession'] = array('mensagem' => 'ERROR: Ocorreu um erro ao tentar confirmar música!', 'contador2' => 0);
-				header('Location: http://localhost/radiocampus/dashboard');
+				header('Location: http://radiocampusadmin.com.br/dashboard');
 			}
 
 		}
