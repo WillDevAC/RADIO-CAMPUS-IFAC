@@ -24,7 +24,7 @@
                 $user->setEmail($_POST['email']);
                 $user->setPassword($_POST['password']);
                 $user->validarLogin();
-                header('Location: http:/radiocampusadmin.com.br/dashboard');
+                header('Location: /dashboard');
             } catch (\Exception $e) {
                 $_SESSION['msg_error'] = array('msg' => $e->getMessage(), 'count' => 0);
                 header('Location: http://radiocampusadmin.com.br/login');
