@@ -120,6 +120,8 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
               <a class=\"list-group-item\" data-toggle=\"modal\" data-target=\"#Modallocutores\"><span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"></span> Lista de locutores <span class=\"badge\">ATIVO</span></a>
               <!-- LISTA DE OUVINTES -->
               <a class=\"list-group-item\" data-toggle=\"modal\" data-target=\"#ModalIp\"><span class=\"glyphicon glyphicon-qrcode\" aria-hidden=\"true\"></span> Relatorios de IP <span class=\"badge\">ATIVO</span></a>
+              <!-- AO VIVO -->
+               <a class=\"list-group-item\" onclick=\"abrir_player_popup()\"><span class=\"glyphicon glyphicon-music\"></span> Transmissão <span class=\"badge\">ATIVO</span></a>
               <!-- LIMPAR CHAT -->
                <a class=\"list-group-item\"  onclick=\"ExcluirRegistros()\"><span class=\"glyphicon glyphicon-list-alt\"></span> Limpar chat <span class=\"badge\">ATIVO</span></a>
               <!-- LOGS -->
@@ -158,7 +160,7 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
                 <div class=\"col-md-3\">
                   <div class=\"well dash-box\">
                     <h2><span class=\"glyphicon glyphicon-stats\" aria-hidden=\"true\"></span> ";
-        // line 106
+        // line 108
         echo twig_escape_filter($this->env, ($context["cadastros"] ?? null), "html", null, true);
         echo "</h2>
                     <h4>Cadastros</h4>
@@ -183,61 +185,61 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
                         <th>Ações locutor</th>
                       </tr>
                       ";
-        // line 128
+        // line 130
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["musics"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["pedidos"]) {
-            // line 129
+            // line 131
             echo "                        <tr>
                             ";
-            // line 130
-            if ((((twig_get_attribute($this->env, $this->source, $context["pedidos"], "name", [], "any", false, false, false, 130) != "") && (twig_get_attribute($this->env, $this->source, $context["pedidos"], "music", [], "any", false, false, false, 130) != "")) && (twig_get_attribute($this->env, $this->source, $context["pedidos"], "course", [], "any", false, false, false, 130) != ""))) {
-                // line 131
-                echo "                                <td>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "name", [], "any", false, false, false, 131), "html", null, true);
-                echo "</td>
-                                <td>";
-                // line 132
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "music", [], "any", false, false, false, 132), "html", null, true);
-                echo "</td>
-                                <td>";
+            // line 132
+            if ((((twig_get_attribute($this->env, $this->source, $context["pedidos"], "name", [], "any", false, false, false, 132) != "") && (twig_get_attribute($this->env, $this->source, $context["pedidos"], "music", [], "any", false, false, false, 132) != "")) && (twig_get_attribute($this->env, $this->source, $context["pedidos"], "course", [], "any", false, false, false, 132) != ""))) {
                 // line 133
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "course", [], "any", false, false, false, 133), "html", null, true);
+                echo "                                <td>";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "name", [], "any", false, false, false, 133), "html", null, true);
+                echo "</td>
+                                <td>";
+                // line 134
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "music", [], "any", false, false, false, 134), "html", null, true);
+                echo "</td>
+                                <td>";
+                // line 135
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "course", [], "any", false, false, false, 135), "html", null, true);
                 echo "</td>
                                   <!-- Verificação de dedicatoria -->
                                   ";
-                // line 135
-                if ((twig_get_attribute($this->env, $this->source, $context["pedidos"], "dedicated", [], "any", false, false, false, 135) != "")) {
-                    // line 136
+                // line 137
+                if ((twig_get_attribute($this->env, $this->source, $context["pedidos"], "dedicated", [], "any", false, false, false, 137) != "")) {
+                    // line 138
                     echo "                                  <td><span class=\"badge\">";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "dedicated", [], "any", false, false, false, 136), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "dedicated", [], "any", false, false, false, 138), "html", null, true);
                     echo "</span></td>
                                   ";
                 }
-                // line 138
+                // line 140
                 echo "
                                   <!-- Verificação não vazia -->
                                   ";
-                // line 140
-                if ((twig_get_attribute($this->env, $this->source, $context["pedidos"], "dedicated", [], "any", false, false, false, 140) == "")) {
-                    // line 141
+                // line 142
+                if ((twig_get_attribute($this->env, $this->source, $context["pedidos"], "dedicated", [], "any", false, false, false, 142) == "")) {
+                    // line 143
                     echo "                                  <td><span class=\"badge\">NENHUMA</span></td>
                                   ";
                 }
-                // line 143
+                // line 145
                 echo "                                  <td><a class=\"btn btn-success\" href=\"dashboard/confirmaMusica?id=";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "id", [], "any", false, false, false, 143), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedidos"], "id", [], "any", false, false, false, 145), "html", null, true);
                 echo "\">Confirmar</a></td></td>
                             ";
             }
-            // line 145
+            // line 147
             echo "                        </tr>
                       ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pedidos'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 147
+        // line 149
         echo "                    </table>
                   </div>
                 </div>
@@ -279,38 +281,38 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
                       </thead>
                       <tbody>
                         ";
-        // line 187
+        // line 189
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["adm"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["locutor"]) {
-            // line 188
+            // line 190
             echo "                        <tr>
                         ";
-            // line 189
-            if (((twig_get_attribute($this->env, $this->source, $context["locutor"], "name", [], "any", false, false, false, 189) != "") && (twig_get_attribute($this->env, $this->source, $context["locutor"], "email", [], "any", false, false, false, 189) != ""))) {
-                // line 190
+            // line 191
+            if (((twig_get_attribute($this->env, $this->source, $context["locutor"], "name", [], "any", false, false, false, 191) != "") && (twig_get_attribute($this->env, $this->source, $context["locutor"], "email", [], "any", false, false, false, 191) != ""))) {
+                // line 192
                 echo "                          <td><span class=\"glyphicon glyphicon-user text-success\" aria-hidden=\"true\"></span> ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["locutor"], "name", [], "any", false, false, false, 190), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["locutor"], "name", [], "any", false, false, false, 192), "html", null, true);
                 echo "</td>
                           <td>";
-                // line 191
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["locutor"], "email", [], "any", false, false, false, 191), "html", null, true);
+                // line 193
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["locutor"], "email", [], "any", false, false, false, 193), "html", null, true);
                 echo "</td>
                           <td class=\"text-center\"><span class=\"badge\">OK</span></td>
                           <td class=\"text-center\"><button><a href=\"dashboard/excluir?id=";
-                // line 193
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["locutor"], "id", [], "any", false, false, false, 193), "html", null, true);
+                // line 195
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["locutor"], "id", [], "any", false, false, false, 195), "html", null, true);
                 echo "\"><span class=\"glyphicon glyphicon-trash text-danger\" aria-hidden=\"true\"></span></td></a></button>
                         ";
             }
-            // line 195
+            // line 197
             echo "                        </tr>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['locutor'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 197
+        // line 199
         echo "                      </tbody>
               </table>
             </div>
@@ -386,11 +388,6 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
                           </tr>
                       </thead>
                       <tbody id=\"dados\">
-                        <tr>
-                          <td class=\"text-center\"><img src=\"assets/img/brasil.png\" id=\"brasil\"></td>
-                          <td class=\"text-center\">192.168.1.1</td>
-                        </tr>
-                        
                       </tbody>
               </table>
             </div>
@@ -458,54 +455,54 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
                           </thead>
                           <tbody id=\"dadostabela\">
                             ";
-        // line 343
+        // line 340
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["request"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 344
+            // line 341
             echo "                            <tr>
                             ";
-            // line 345
-            if (((twig_get_attribute($this->env, $this->source, $context["user"], "nome", [], "any", false, false, false, 345) != "") && (twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 345) != ""))) {
-                // line 346
+            // line 342
+            if (((twig_get_attribute($this->env, $this->source, $context["user"], "nome", [], "any", false, false, false, 342) != "") && (twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 342) != ""))) {
+                // line 343
                 echo "                            <form method=\"POST\" action=\"dashboard/request?user=";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nome", [], "any", false, false, false, 346), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nome", [], "any", false, false, false, 343), "html", null, true);
                 echo "&e=";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 346), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 343), "html", null, true);
                 echo "&id=";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 346), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 343), "html", null, true);
                 echo "\">
                               <td id=\"nome\"><span class=\"glyphicon glyphicon-user text-success\" aria-hidden=\"true\"></span> ";
-                // line 347
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nome", [], "any", false, false, false, 347), "html", null, true);
+                // line 344
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nome", [], "any", false, false, false, 344), "html", null, true);
                 echo "</td>
                               <td id=\"email\">";
-                // line 348
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 348), "html", null, true);
+                // line 345
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 345), "html", null, true);
                 echo "</td>
                               <td class=\"text-center\"><span class=\"badge\">PENDENTE</span></td>
                               <td class=\"text-center\"><button type=\"submit\"><span class=\"glyphicon glyphicon-ok text-success\" aria-hidden=\"true\"></span></td></button>
                               <td style=\"display: none;\"><input type=\"text\" name=\"secret\" value=\"";
-                // line 351
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "senha", [], "any", false, false, false, 351), "html", null, true);
+                // line 348
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "senha", [], "any", false, false, false, 348), "html", null, true);
                 echo "\"></td>
                             </form>
                             <td class=\"text-center\"><a href=\"dashboard/unrequest?id=";
-                // line 353
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 353), "html", null, true);
+                // line 350
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 350), "html", null, true);
                 echo "&email=";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 353), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 350), "html", null, true);
                 echo "\"><button><span class=\"glyphicon glyphicon-remove text-danger\" aria-hidden=\"true\"></span></td></button></a>
                             ";
             }
-            // line 355
+            // line 352
             echo "                            </tr>
                             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 357
+        // line 354
         echo "                            
                           </tbody>
                   </table>
@@ -556,7 +553,6 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
           </div>
         </div>
     </div>
-
     <!-- Footer -->
     <footer class=\"page-footer font-small blue rodapes\">
       <div class=\"footer-copyright text-center py-3\">© Radio Campus - Todos os direitos reservados
@@ -591,7 +587,7 @@ class __TwigTemplate_6b9d7e8ece31c6e0303e4c4ad4a64a5e0d2eff393d656de466476cffc79
 
     public function getDebugInfo()
     {
-        return array (  509 => 357,  502 => 355,  495 => 353,  490 => 351,  484 => 348,  480 => 347,  471 => 346,  469 => 345,  466 => 344,  462 => 343,  314 => 197,  307 => 195,  302 => 193,  297 => 191,  292 => 190,  290 => 189,  287 => 188,  283 => 187,  241 => 147,  234 => 145,  228 => 143,  224 => 141,  222 => 140,  218 => 138,  212 => 136,  210 => 135,  205 => 133,  201 => 132,  196 => 131,  194 => 130,  191 => 129,  187 => 128,  162 => 106,  107 => 53,  101 => 50,  98 => 49,  95 => 48,  89 => 45,  86 => 44,  84 => 43,  72 => 34,  37 => 1,);
+        return array (  506 => 354,  499 => 352,  492 => 350,  487 => 348,  481 => 345,  477 => 344,  468 => 343,  466 => 342,  463 => 341,  459 => 340,  316 => 199,  309 => 197,  304 => 195,  299 => 193,  294 => 192,  292 => 191,  289 => 190,  285 => 189,  243 => 149,  236 => 147,  230 => 145,  226 => 143,  224 => 142,  220 => 140,  214 => 138,  212 => 137,  207 => 135,  203 => 134,  198 => 133,  196 => 132,  193 => 131,  189 => 130,  164 => 108,  107 => 53,  101 => 50,  98 => 49,  95 => 48,  89 => 45,  86 => 44,  84 => 43,  72 => 34,  37 => 1,);
     }
 
     public function getSourceContext()

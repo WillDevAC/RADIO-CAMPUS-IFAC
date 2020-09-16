@@ -7,11 +7,22 @@ function IpList()
 			var array = $.map(resultado, el => el)
 			var messages = array.map(message =>{
 				//falta implementar
-				return console.log(message);
-
+				if (message >= 0){return null}
+				if(message == ' '){return '<p>Sem registros</p>'};
+				if(message == undefined){return true}else{
+					return '<tr><td class="text-center"><img src="assets/img/brasil.png" id="brasil"></td><td class"text-center>'+ message +'</td></tr>';
+				}
 			})
+			document.querySelector("#dados").innerHTML = messages.join("");
 		});
+		//<tr>
+		  //<td class="text-center"><img src="assets/img/brasil.png" id="brasil"></td>
+		  //<td class="text-center">192.168.1.1</td>
+		//</tr>
 
+}
+function abrir_player_popup() {
+window.open( "https://player.xcast.com.br/player-popup-responsivo/11978/2", "","width=500,height=290,toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=NO" );
 }
 
 //Create email
@@ -48,3 +59,5 @@ $('#form_email').submit(function(e){
 $(document).ready(function(){
 	IpList();
 });
+
+setInterval('IpList()', 10000);

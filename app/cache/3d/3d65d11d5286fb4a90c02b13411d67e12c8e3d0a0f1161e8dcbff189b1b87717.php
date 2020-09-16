@@ -45,7 +45,7 @@ class __TwigTemplate_552d525e6a75b85750f25a4544d919214b1166b4a9d5c5366a7270cf5ca
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 </head>
 <body>
-  <img class=\"wave\" src=\"http://localhost/radiocampus/assets/img/wave.png\">
+  <img class=\"wave\" src=\"http://radiocampusadmin.com.br/assets/img/wave.png\">
   <div class=\"container\">
     <div class=\"img\">
     </div>
@@ -79,7 +79,7 @@ class __TwigTemplate_552d525e6a75b85750f25a4544d919214b1166b4a9d5c5366a7270cf5ca
                     <input type=\"password\" class=\"input\" id=\"senha\" required autocomplete=\"off\">
                  </div>
               </div>
-              <center><div class=\"loader\" id=\"carregar\" style=\"display: none;\"></div></center>
+              <center><div class=\"loader\" id=\"carrega\" style=\"display: none;\"></div></center>
               <input type=\"submit\" form=\"form1\" class=\"btn\" value=\"Solicitar cadastro\">
               <a href=\"http://radiocampusadmin.com.br/login\" style=\"text-align: center;\">Voltar para trás.</a>
           </form>

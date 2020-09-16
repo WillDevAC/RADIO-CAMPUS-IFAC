@@ -13,10 +13,10 @@ $('#form1').submit(function(e){
 			dataType: 'json',
 
 		  beforeSend: function() {
-		  	$('#carregar').css("display", "flex");
+		  	$('#carrega').css("display", "flex");
 		},
 		}).done(function(result){
-			$('#carregar').css("display", "none");
+			$('#carrega').css("display", "none");
 			if(result.error == true)
 			{
 				Swal.fire({

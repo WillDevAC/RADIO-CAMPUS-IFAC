@@ -66,6 +66,8 @@
               <a class="list-group-item" data-toggle="modal" data-target="#Modallocutores"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Lista de locutores <span class="badge">ATIVO</span></a>
               <!-- LISTA DE OUVINTES -->
               <a class="list-group-item" data-toggle="modal" data-target="#ModalIp"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Relatorios de IP <span class="badge">ATIVO</span></a>
+              <!-- AO VIVO -->
+               <a class="list-group-item" onclick="abrir_player_popup()"><span class="glyphicon glyphicon-music"></span> Transmissão <span class="badge">ATIVO</span></a>
               <!-- LIMPAR CHAT -->
                <a class="list-group-item"  onclick="ExcluirRegistros()"><span class="glyphicon glyphicon-list-alt"></span> Limpar chat <span class="badge">ATIVO</span></a>
               <!-- LOGS -->
@@ -269,11 +271,6 @@
                           </tr>
                       </thead>
                       <tbody id="dados">
-                        <tr>
-                          <td class="text-center"><img src="assets/img/brasil.png" id="brasil"></td>
-                          <td class="text-center">192.168.1.1</td>
-                        </tr>
-                        
                       </tbody>
               </table>
             </div>
@@ -404,7 +401,6 @@
           </div>
         </div>
     </div>
-
     <!-- Footer -->
     <footer class="page-footer font-small blue rodapes">
       <div class="footer-copyright text-center py-3">© Radio Campus - Todos os direitos reservados
